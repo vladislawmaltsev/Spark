@@ -26,6 +26,12 @@ $(".button_register").click(function (event) {
             <input placeholder=" " type="text" name="secondName" id="secondName" class="form__input" /> 
             <label class="form__label" for="secondName">Фамилия</label></div>
             <div class="form__group">
+            <p>Ваш пол: 
+             <input type="radio" name="sex" value="man" checked>мужской   
+             <input type="radio" name="sex" value="woman"> женский
+             </p>
+            </div>
+            <div class="form__group">
             <input placeholder=" " type="text" name="age" id="age" class="form__input" /> 
             <label class="form__label" for="age">Возраст</label></div>
             <div class="form__group"> 
@@ -67,10 +73,10 @@ window.onscroll = function () {
     }
 };
 
-$(".menu").on("click", "a", function() {
+$(".menu").on("click", "a", function () {
     event.preventDefault();
     let id = $(this).attr("href"),
         top = $(id).offset().top - 60;
 
-    $("body,html").animate({ scrollTop: top }, 400);
+    $("body,html").animate({scrollTop: top}, 400);
 });
